@@ -10,14 +10,34 @@
 html{
   overflow-x: hidden;
   margin: 0;
-  scrollbar-color: black white;
+  scrollbar-color: rgba(0, 0, 0, 0.529) white;
   scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.529);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 @media only screen and (max-width: 600px){
   html{
     scrollbar-width: none;
-  }
+    background-color: #b1bdc5;
+  } 
 }
 
 body{
