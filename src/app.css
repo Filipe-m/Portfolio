@@ -1,0 +1,52 @@
+:root{
+  --mainHeaderBCColor: #dadde2;
+  --mainHeaderSecundaryBC: #43655a;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  overflow-x: hidden;
+  margin: 0;
+  scrollbar-color: black white;
+  scrollbar-width: thin;
+}
+
+@media only screen and (max-width: 600px){
+  html{
+    scrollbar-width: none;
+  }
+}
+
+body{
+  margin: 0;
+}
+
+::selection{
+  background-color: #f06;
+  color: black;
+}
+
+.custom-shape-divider-top-1665858180 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1665858180 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 72px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1665858180 .shape-fill {
+  fill: #DADDE2;
+}
