@@ -1,6 +1,7 @@
 <script>
   import HeaderContent from './lib/header.svelte'
   import Projects from './lib/projects.svelte'
+  import Footer from './lib/footer.svelte'
 </script>
 
 <main>
@@ -8,17 +9,22 @@
     <HeaderContent />
   </header>
   <article>
-    <Projects/>
+    <Projects />
+  </article>
+  <article>
+    <Footer />
   </article>
 </main>
 
 <style>
-  main{
+  main {
     position: relative;
   }
-  article{
+  article {
     position: relative;
+    overflow: hidden;
   }
+
   header {
     scroll-snap-align: start;
     display: flex;

@@ -1,23 +1,23 @@
-:root{
+:root {
   --mainHeaderBCColor: #dadde2;
   --mainHeaderSecundaryBC: #43655a;
 }
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
 }
 
-html{
+html {
   overflow-x: hidden;
   margin: 0;
   scrollbar-color: rgba(0, 0, 0, 0.529) white;
   scrollbar-width: thin;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
-body{
-  scroll-snap-type: y mandatory;
+body {
+  scroll-snap-type: y proximity;
 }
 
 ::-webkit-scrollbar {
@@ -39,18 +39,18 @@ body{
   background: #555;
 }
 
-@media only screen and (max-width: 600px){
-  html{
+@media only screen and (max-width: 600px) {
+  html {
     scrollbar-width: none;
     background-color: #b1bdc5;
-  } 
+  }
 }
 
-body{
+body {
   margin: 0;
 }
 
-::selection{
+::selection {
   background-color: #f06;
   color: black;
 }
@@ -76,4 +76,8 @@ body{
 
 .custom-shape-divider-top-1665858180 .shape-fill {
   fill: #DADDE2;
+}
+
+#visual{
+  image-resolution: cover;
 }

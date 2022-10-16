@@ -1,41 +1,59 @@
 <script>
-  import repo from 'C:/Users/aikad/Desktop/Projects/Portfolio/src/assets/repo.svg'
+  import NLW from 'C:/Users/aikad/Desktop/Projects/Portfolio/src/assets/NLW HEAT.png'
+  import Caesar from 'C:/Users/aikad/Desktop/Projects/Portfolio/src/assets/Caesar.png'
+  import Calculator from 'C:/Users/aikad/Desktop/Projects/Portfolio/src/assets/Calculator.png'
+  import NewTab from 'C:/Users/aikad/Desktop/Projects/Portfolio/src/assets/New Tab.png'
+  let Svelte =
+    'https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg'
+  let Js =
+    'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg'
+  let React =
+    'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg'
+
   let projects = [
     {
       name: 'Cracha NLW ',
       color: 'rgb(12, 109, 119)',
       lastColor: '#dadde2',
       nextColor: 'rgb(40, 37, 37)',
-      image: '/src/assets/NLW HEAT.png',
+      image: NLW,
       link: 'https://filipe-m.github.io/Cracha_NLW/',
-      repositorie: 'https://github.com/Filipe-m/Cracha_NLW'
+      repositorie: 'https://github.com/Filipe-m/Cracha_NLW',
+      language: Js,
+      text: "This banner site was the first website, created in the Origin trail at NLW Heat 2021, it's a static page made for PC"
     },
     {
-      name: 'Caesar cipher',
+      name: 'Caesar Cipher',
       color: 'rgb(40, 37, 37)',
       lastColor: 'rgb(12, 109, 119)',
       nextColor: '#F5A623',
-      image: '/src/assets/Caesar.png',
+      image: Caesar,
       link: 'https://filipe-m.github.io/Caesar-cipher/',
-      repositorie: 'https://github.com/Filipe-m/Caesar-cipher'
+      repositorie: 'https://github.com/Filipe-m/Caesar-cipher',
+      language: Js,
+      text: 'This was a JS challange to myself to test my knowledge and creat a site that can Incript and Decrypt Caesar Cipher.'
     },
     {
       name: 'Calculator',
       color: '#f5a623',
       lastColor: 'rgb(40, 37, 37)',
       nextColor: '#D0021B',
-      image: '/src/assets/Calculator.png',
+      image: Calculator,
       link: 'https://filipe-m.github.io/Calculator/',
-      repositorie: 'https://github.com/Filipe-m/Calculator'
+      repositorie: 'https://github.com/Filipe-m/Calculator',
+      language: Js,
+      text: "Another JS challange but this time to make a simple but funcional calculator, although it doesn't support different and complex operations it still work perfetcly by it's means."
     },
     {
       name: 'New Tab',
       color: '#c25450',
       lastColor: '#F5A623',
       nextColor: '#dadde2',
-      image: '/src/assets/New Tab.png',
+      image: NewTab,
       link: 'https://filipe-m.github.io/NewTab/',
-      repositorie: 'https://github.com/Filipe-m/NewTab'
+      repositorie: 'https://github.com/Filipe-m/NewTab',
+      language: Svelte,
+      text: "A project to myself to build a new Start Page to my browser, this time using API's and a clock creating a minimalistic but clear home page that can be simple customizable in it's em."
     }
   ]
 </script>
@@ -70,6 +88,12 @@
     </div>
     <div class="text">
       <h2 style:color={project.nextColor}>{project.name}</h2>
+      <p style:color={project.lastColor}>{project.text}</p>
+      <em style:color={project.nextColor}
+        >Made using: <span
+          ><img class="icon" src={project.language} alt="" /></span
+        ></em
+      >
     </div>
     <div class="images">
       <img
@@ -120,6 +144,10 @@
     border-radius: 10px;
   }
 
+  .img:hover{
+    scale: 1.2;
+  }
+
   .images {
     width: 60vw;
     height: 100vh;
@@ -151,11 +179,41 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+  }
+
+  .text em {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 150%;
+    margin-left: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 10%;
+  }
+
+  .text em span {
+    display: block;
+    width: 10%;
+    height: 50%;
+  }
+
+  .icon {
+    width: 100%;
+    height: 100%;
+  }
+
+  .text p {
+    font-family: 'Oxygen Mono', monospace;
+    font-size: 150%;
+    margin-left: 10%;
   }
 
   .text h2 {
     font-family: 'Permanent Marker', cursive;
     font-size: 400%;
+    margin-left: 10%;
   }
   section {
     display: flex;
@@ -173,6 +231,7 @@
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    z-index: 1;
   }
 
   .custom-shape-divider-top-1665881071 svg {
@@ -185,10 +244,13 @@
   @media only screen and (max-width: 600px) {
     .text {
       width: 100vw;
-      height: 40vh;
+      height: 30vh;
+      margin-top: auto;
+      z-index: 2;
     }
     .text h2 {
       font-size: 260%;
+      margin: 0;
     }
     section {
       flex-direction: column;
@@ -197,12 +259,39 @@
       width: 100vw;
       height: 60vh;
     }
-    .img{
+    .img {
       width: 80%;
-      height: 50%;
+      height: 40%;
     }
     .images p {
-    font-size: 100%;
-  }
+      font-size: 100%;
+    }
+    .text em {
+      font-size: 100%;
+      margin-left: 5%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin:0;
+     }
+
+    .text em span {
+      display: block;
+      width: 10%;
+      height: 50%;
+    }
+
+    .icon {
+      width: 100%;
+      height: 100%;
+    }
+
+    .text p {
+      font-family: 'Oxygen Mono', monospace;
+      font-size: 100%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
   }
 </style>
