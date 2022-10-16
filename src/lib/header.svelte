@@ -59,16 +59,18 @@
 
 <style>
   code {
-    color: rgb(30, 0, 255);
-    font-size: 130%;
+    color: rgb(255, 0, 0);
+    font-size: 120%;
+    font-family: 'Roboto mono';
+    font-weight: bolder;
   }
 
   .text {
     font-size: 120%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
   }
 
-  .text p{
+  .text p {
     margin: 3%;
     text-align: center;
   }
@@ -84,7 +86,7 @@
 
   .article h1 {
     font-size: 300%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Permanent Marker', cursive;
   }
 
   .about {
@@ -126,6 +128,17 @@
 
   .img {
     max-width: 100%;
+    min-height: 100%;
+    border-radius: 11px;
+    border: none;
+  }
+
+  .icon {
+    background-color: transparent;
+  }
+
+  .img:hover {
+    scale: 1.3;
   }
 
   @media only screen and (max-width: 600px) {

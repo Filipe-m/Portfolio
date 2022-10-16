@@ -5,6 +5,7 @@
 
 *{
   box-sizing: border-box;
+  margin: 0;
 }
 
 html{
@@ -12,6 +13,11 @@ html{
   margin: 0;
   scrollbar-color: rgba(0, 0, 0, 0.529) white;
   scrollbar-width: thin;
+  scroll-snap-type: y mandatory;
+}
+
+body{
+  scroll-snap-type: y mandatory;
 }
 
 ::-webkit-scrollbar {
@@ -57,6 +63,7 @@ body{
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
+  z-index: 2;
 }
 
 .custom-shape-divider-top-1665858180 svg {
