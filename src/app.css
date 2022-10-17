@@ -3,6 +3,17 @@
   --mainHeaderSecundaryBC: #43655a;
 }
 
+.hidden{
+  opacity: 0;
+  transition: 1s;
+  filter: blur(10px);
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0)
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,11 +24,6 @@ html {
   margin: 0;
   scrollbar-color: rgba(0, 0, 0, 0.529) white;
   scrollbar-width: thin;
-  scroll-snap-type: y proximity;
-}
-
-body {
-  scroll-snap-type: y proximity;
 }
 
 ::-webkit-scrollbar {

@@ -9,9 +9,17 @@ const app = new App({
 
 export default app
 
-const tween = KUTE.fromTo(
-  '#blob1',
-  { path: '#blob1' },
-  { path: '#blob2' },
-  { repeat: 999, duration: 5000, yoyo: true }
-).start();
+const animatedImage = document.querySelectorAll('.watching');
+
+const observer = new IntersectionObserver( (entries)=>{
+  entries.forEach( (entry)=>{
+    if (entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+    else{
+      entry.target.classList.remove('show');
+    }
+  })
+})
+
+animatedImage.forEach( (el)=> observer.observe(el))

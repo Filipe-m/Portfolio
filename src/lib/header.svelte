@@ -3,6 +3,13 @@
   import emailLogo from 'C:/Users/aikad/Desktop/Projects/Portfolio/src/assets/email.svg'
   import githubLogo from 'C:/Users/aikad/Desktop/Projects/Portfolio/src/assets/github.svg'
   import instagramLogo from 'C:/Users/aikad/Desktop/Projects/Portfolio/src/assets/instagram.svg'
+  let Svelte =
+    'https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg'
+  let Js =
+    'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg'
+  let React =
+    'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg'
+
   let contact = [
     {
       link: 'https://github.com/Filipe-m',
@@ -48,26 +55,33 @@
   <div class="text">
     <p>
       I'm currently a last-year highschool student who's trying to learn web
-      development
+      development.
     </p>
     <p>
       Tecnologies I'm able to use: <br />
-      <code>React <br /> Svelte <br /> Javascript</code>
+      <code>React <br /> Svelte<br /> Javascript</code>
     </p>
   </div>
 </div>
 
 <style>
+
   code {
-    color: rgb(255, 0, 0);
+    color: rgb(109, 102, 0);
     font-size: 120%;
-    font-family: 'Roboto mono';
+    font-family: 'Share Tech Mono', monospace;
     font-weight: bolder;
   }
 
   .text {
     font-size: 120%;
     font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeIn 2s calc(3s + 1s) ease  forwards;
   }
 
   .text p {
@@ -86,7 +100,48 @@
 
   .article h1 {
     font-size: 300%;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Syne Mono', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .article h1::before,
+  .article h1::after{
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+  }
+
+  .article h1::before{
+    background-color: #dadde2;
+    animation: typewriter 3s steps(22) 1s forwards;
+  }
+
+  .article h1::after{
+    width: 0.125rem;
+    background: black;
+    animation: typewriter 3s steps(22) 1s forwards, blink 750ms steps(22) infinite;
+  }
+
+  @keyframes fadeIn{
+    to{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes blink{
+    to{background: transparent}
+  }
+
+  @keyframes typewriter{
+    to{left: 100%}
   }
 
   .about {
@@ -142,6 +197,9 @@
   }
 
   @media only screen and (max-width: 600px) {
+    code{
+      font-size: 110%;
+    }
     .about {
       height: 40vh;
       width: 100vw;
@@ -154,7 +212,9 @@
       width: 100vw;
     }
     .article h1 {
-      font-size: 180%;
+      font-size: 160%;
+      padding: .7rem;
+      flex-wrap: nowrap;
     }
     .text {
       text-align: center;

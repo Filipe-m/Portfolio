@@ -99,7 +99,7 @@
       <img
         src={project.image}
         alt={project.name}
-        class="img"
+        class="img watching hidden"
         style:box-shadow="0px 0px 33px 10px {project.nextColor}"
       />
       <div class="textWrapper" style:fill={project.lastColor}>
@@ -143,6 +143,7 @@
     height: 45%;
     border-radius: 10px;
   }
+
 
   .img:hover{
     scale: 1.2;
@@ -220,8 +221,6 @@
     flex-direction: row;
     position: relative;
     height: 100vh;
-    scroll-snap-align: start;
-    /*  background-color: rgb(12, 109, 119); */
   }
 
   .custom-shape-divider-top-1665881071 {
