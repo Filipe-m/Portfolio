@@ -1,8 +1,8 @@
 <script>
-  import NLW from 'C:/Users/aikad/Desktop/Projects/Portfolio/src/assets/NLW HEAT.png'
-  import Caesar from 'C:/Users/aikad/Desktop/Projects/Portfolio/src/assets/Caesar.png'
-  import Calculator from 'C:/Users/aikad/Desktop/Projects/Portfolio/src/assets/Calculator.png'
-  import NewTab from 'C:/Users/aikad/Desktop/Projects/Portfolio/src/assets/New Tab.png'
+  import NLW from '../assets/NLW HEAT.png'
+  import Gatomelow from '../assets/gatomelow.png'
+  import Calculator from '../assets/Calculator.png'
+  import NewTab from '../assets/New Tab.png'
   let Svelte =
     'https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg'
   let Js =
@@ -20,18 +20,18 @@
       link: 'https://filipe-m.github.io/Cracha_NLW/',
       repositorie: 'https://github.com/Filipe-m/Cracha_NLW',
       language: Js,
-      text: "This banner site was the first website, created in the Origin trail at NLW Heat 2021, it's a static page made for PC"
+      text: "This banner site was the first website, created in the Origin trail at NLW Heat 2021, it's a static page made for PC."
     },
     {
-      name: 'Caesar Cipher',
+      name: 'Gatomelow',
       color: 'rgb(40, 37, 37)',
       lastColor: 'rgb(12, 109, 119)',
       nextColor: '#F5A623',
-      image: Caesar,
-      link: 'https://filipe-m.github.io/Caesar-cipher/',
-      repositorie: 'https://github.com/Filipe-m/Caesar-cipher',
-      language: Js,
-      text: 'This was a JS challange to myself to test my knowledge and creat a site that can Incript and Decrypt Caesar Cipher.'
+      image: Gatomelow,
+      link: 'https://filipe-m.github.io/Gatomelow/',
+      repositorie: 'https://github.com/Filipe-m/Gatomelow',
+      language: React,
+      text: 'Gatomelow is a parody of a existing e-comerce website named Caramelow whic uses React and Tailwind and made done responsively'
     },
     {
       name: 'Calculator',
@@ -42,7 +42,7 @@
       link: 'https://filipe-m.github.io/Calculator/',
       repositorie: 'https://github.com/Filipe-m/Calculator',
       language: Js,
-      text: "Another JS challange but this time to make a simple but funcional calculator, although it doesn't support different and complex operations it still work perfetcly by it's means."
+      text: "It's a calculator made only with HTML, CSS and JavaScript. It supports basic operations."
     },
     {
       name: 'New Tab',
@@ -144,8 +144,7 @@
     border-radius: 10px;
   }
 
-
-  .img:hover{
+  .img:hover {
     scale: 1.2;
   }
 
@@ -272,8 +271,8 @@
       display: flex;
       justify-content: center;
       align-items: flex-end;
-      margin:0;
-     }
+      margin: 0;
+    }
 
     .text em span {
       display: block;
